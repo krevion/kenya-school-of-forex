@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101e35">
+  <meta name="description" content="Build practical forex trading skills with Kenya School of Forex. Join online or in-person classes in Westlands, Nairobi.">
+  <title>{% block title %}Kenya School of Forex | Trade with a plan{% endblock %}</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="{% static 'school/site.css' %}">
+  <script src="{% static 'school/site.js' %}" defer></script>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> New trader? Your journey starts with a plan. <a href="{% url 'programs' %}">Explore our classes <span aria-hidden="true">→</span></a></div>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="{% url 'home' %}" aria-label="Kenya School of Forex home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span class="brand-name">KENYA SCHOOL<span>OF FOREX</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
+        <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">Our story</a>
+        <a href="{% url 'curriculum' %}" class="{% if request.resolver_match.url_name == 'curriculum' %}active{% endif %}">What you'll learn</a>
+        <a href="{% url 'programs' %}" class="{% if request.resolver_match.url_name == 'programs' %}active{% endif %}">Classes & fees</a>
+        <a href="{% url 'contact' %}" class="nav-cta">Talk to us <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="{% url 'home' %}">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span class="brand-name">KENYA SCHOOL<span>OF FOREX</span></span>
+        </a>
+        <p>Learn the skill. Respect the risk. Build your own process.</p>
+      </div>
+      <div><h3>Explore</h3><a href="{% url 'about' %}">Our story</a><a href="{% url 'curriculum' %}">Curriculum</a><a href="{% url 'programs' %}">Classes & fees</a></div>
+      <div><h3>Find us</h3><p>Azure Towers, 6th Floor<br>Westlands, Nairobi</p><p>Mon–Fri, 8:00 am–5:00 pm</p></div>
+      <div><h3>Start a conversation</h3><a href="tel:+254701818181">+254 701 818 181</a><a href="{% url 'contact' %}">Visit our contact page →</a></div>
+    </div>
+    <div class="footer-bottom"><span>© {% now "Y" %} Kenya School of Forex</span><span>Forex trading involves significant risk. Education is not a guarantee of results.</span></div>
+  </footer>
+</body>
+</html>

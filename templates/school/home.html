@@ -1,4 +1,5 @@
 {% extends 'school/base.html' %}
+{% load static %}
 {% block title %}Kenya School of Forex | Learn to trade with a plan{% endblock %}
 {% block content %}
 <section class="hero">
@@ -10,7 +11,7 @@
     <div class="hero-proof"><div class="proof-avatars"><span>K</span><span>S</span><span>F</span></div><p><strong>A stronger foundation</strong><br>starts with the right education.</p></div>
   </div>
   <div class="hero-visual">
-    <img class="hero-image" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Financial market charts on a trading screen">
+    <img class="hero-image" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Financial market charts on a trading screen" decoding="async" fetchpriority="high">
     <div class="image-wash"></div>
     <div class="market-card"><div class="market-card-top"><span>PRICE ACTION</span><span class="live-dot">● &nbsp;MARKET STUDY</span></div><svg class="mini-chart" viewBox="0 0 300 94" role="img" aria-label="Illustrative rising and falling market chart"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#d4af37" stop-opacity=".3"/><stop offset="1" stop-color="#d4af37" stop-opacity="0"/></linearGradient></defs><path d="M0 72 L28 59 52 67 78 39 104 48 132 27 157 39 185 18 210 31 237 11 260 25 300 5 L300 94 L0 94Z" fill="url(#chartFill)"/><path d="M0 72 L28 59 52 67 78 39 104 48 132 27 157 39 185 18 210 31 237 11 260 25 300 5" fill="none" stroke="#d4af37" stroke-width="2.5"/><path d="M0 88H300M0 58H300M0 28H300" stroke="#ffffff" stroke-opacity=".12" stroke-dasharray="3 5"/></svg><div class="market-card-bottom"><span>READ THE MARKET, NOT THE HYPE</span><span class="chart-arrow">↗</span></div></div>
     <div class="floating-note"><span class="note-icon">✳</span><span><strong>Skill before strategy</strong><small>Learn the why behind every trade</small></span></div>
@@ -21,12 +22,42 @@
 <section class="section section-light">
   <div class="section-heading"><div><div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> LEARN WITH PURPOSE</div><h2>More than charts.<br><em>A skill for life.</em></h2></div><p>Forex can be complex. Your learning journey doesn't have to be. We make the concepts practical, the process clear, and risk management part of every lesson.</p></div>
   <div class="feature-grid">
-    <article class="feature-card"><img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Candlestick price chart on a screen"><div class="feature-card-copy"><span class="card-number">01 / FOUNDATION</span><h3>Understand price action</h3><p>Read candles, trends and market structure with a clear, repeatable framework.</p><a href="{% url 'curriculum' %}" class="arrow-link" aria-label="Explore the curriculum">↗</a></div></article>
-    <article class="feature-card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Financial charts and analytics displayed on a laptop"><div class="feature-card-copy"><span class="card-number">02 / PROCESS</span><h3>Build a trading plan</h3><p>Learn to approach opportunities patiently, with defined entries and exits.</p><a href="{% url 'curriculum' %}" class="arrow-link" aria-label="Explore the curriculum">↗</a></div></article>
-    <article class="feature-card"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Market performance charts on a digital display"><div class="feature-card-copy"><span class="card-number">03 / PROTECTION</span><h3>Put risk first</h3><p>Practice position sizing and disciplined risk management before you trade.</p><a href="{% url 'curriculum' %}" class="arrow-link" aria-label="Explore the curriculum">↗</a></div></article>
+    <article class="feature-card"><img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Candlestick price chart on a screen" decoding="async" loading="lazy"><div class="feature-card-copy"><span class="card-number">01 / FOUNDATION</span><h3>Understand price action</h3><p>Read candles, trends and market structure with a clear, repeatable framework.</p><a href="{% url 'curriculum' %}" class="arrow-link" aria-label="Explore the curriculum">↗</a></div></article>
+    <article class="feature-card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Financial charts and analytics displayed on a laptop" decoding="async" loading="lazy"><div class="feature-card-copy"><span class="card-number">02 / PROCESS</span><h3>Build a trading plan</h3><p>Learn to approach opportunities patiently, with defined entries and exits.</p><a href="{% url 'curriculum' %}" class="arrow-link" aria-label="Explore the curriculum">↗</a></div></article>
+    <article class="feature-card"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Market performance charts on a digital display" decoding="async" loading="lazy"><div class="feature-card-copy"><span class="card-number">03 / PROTECTION</span><h3>Put risk first</h3><p>Practice position sizing and disciplined risk management before you trade.</p><a href="{% url 'curriculum' %}" class="arrow-link" aria-label="Explore the curriculum">↗</a></div></article>
+  </div>
+</section>
+<section class="video-showcase">
+  <div class="video-showcase-heading">
+    <div class="eyebrow"><span class="eyebrow-line"></span> A CLOSER LOOK</div>
+    <h2>See learning <em>in action.</em></h2>
+    <p>Get to know Kenya School of Forex and explore our approach to practical learning.</p>
+  </div>
+  <div class="video-grid">
+    <article class="video-card">
+      <video controls preload="none" playsinline aria-label="Featured Kenya School of Forex video">
+        <source src="{% static 'school/videos/ksf videos.mp4' %}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+      <div class="video-card-copy"><span class="video-index">FEATURED VIDEO · 01</span><h3>Meet Kenya School of Forex</h3></div>
+    </article>
+    <article class="video-card">
+      <video controls preload="none" playsinline aria-label="Kenya School of Forex video 2">
+        <source src="{% static 'school/videos/ksf video 2.mp4' %}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+      <div class="video-card-copy"><span class="video-index">FEATURED VIDEO · 02</span><h3>Explore our learning approach</h3></div>
+    </article>
+    <article class="video-card">
+      <video controls preload="none" playsinline aria-label="Kenya School of Forex video 3">
+        <source src="{% static 'school/videos/ksf video 3.mp4' %}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+      <div class="video-card-copy"><span class="video-index">FEATURED VIDEO · 03</span><h3>Take a closer look</h3></div>
+    </article>
   </div>
 </section>
 <section class="quote-band"><span class="quote-mark">“</span><blockquote>Trading isn't a shortcut to success. Education, patience and a process give you a better place to start.</blockquote><span class="quote-caption">A MORE GROUNDED WAY TO LEARN FOREX</span></section>
-<section class="section split-section"><div class="split-copy"><div class="eyebrow"><span class="eyebrow-line"></span> YOUR JOURNEY, YOUR FORMAT</div><h2>Learn in the way<br>that works <em>for you.</em></h2><p>Join us in person at our Westlands training space or learn online from wherever you are. Both two-month programmes include lifetime signal room access.</p><a class="button button-outline" href="{% url 'programs' %}">Compare class options <span aria-hidden="true">→</span></a></div><div class="split-images"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Learners collaborating around a table"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Online learning on a laptop"></div></section>
+<section class="section split-section"><div class="split-copy"><div class="eyebrow"><span class="eyebrow-line"></span> YOUR JOURNEY, YOUR FORMAT</div><h2>Learn in the way<br>that works <em>for you.</em></h2><p>Join us in person at our Westlands training space or learn online from wherever you are. Both two-month programmes include lifetime signal room access.</p><a class="button button-outline" href="{% url 'programs' %}">Compare class options <span aria-hidden="true">→</span></a></div><div class="split-images"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Learners collaborating around a table" decoding="async" loading="lazy"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Online learning on a laptop" decoding="async" loading="lazy"></div></section>
 <section class="cta-band"><div><span class="eyebrow"><span class="eyebrow-line"></span> READY WHEN YOU ARE</span><h2>Start with the knowledge.<br><em>Build from there.</em></h2></div><a href="{% url 'contact' %}" class="button button-gold">Let's talk <span aria-hidden="true">↗</span></a></section>
 {% endblock %}
